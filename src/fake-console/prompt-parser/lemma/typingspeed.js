@@ -2,7 +2,7 @@ import PromptLemma from "../PromptLemma"
 
 
 async function typingspeed(parentPL, args) {
-    let splitted = args.split(/,(.*)/g)
+    let splitted = args.split(/,([\s\S]*)/g)
     let delay = parseInt(splitted[0])
     let prompt = splitted[1]
     let subpl = new PromptLemma(parentPL.conductor, prompt)

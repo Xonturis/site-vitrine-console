@@ -48,7 +48,7 @@ class PromptLemma {
     }
 
     async parseCommand(lemme) {
-        let lemme_splitted = lemme.split(/=(.*)/g)
+        let lemme_splitted = lemme.split(/=([\s\S]*)/g)
         console.log('--- pc');
         console.log(lemme_splitted);
         console.log('---');

@@ -2,7 +2,7 @@ import PromptLemma from "../PromptLemma"
 
 
 async function fontsize(parentPL, args) {
-    let splitted = args.split(/,(.*)/g)
+    let splitted = args.split(/,([\s\S]*)/g)
     let size = splitted[0]
     let prompt = splitted[1]
     let subconsole = new PromptLemma(parentPL.conductor, prompt)
