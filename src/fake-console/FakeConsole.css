@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    background-color: #16213E;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 42px;
+}
+
+.fake-console {
+    white-space: pre-line;
+    width: 80ch;
+    bottom: 0;
+    position: absolute;
+    overflow: scroll;
+    max-height: 100%;
+}
+
+.prompt {
+    display: inline;
+}
+
+.blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+    -webkit-animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+.fake-text-cursor {
+    display: inline;
+}
+
+.fake-text:empty ~ .fake-text-cursor {
+    display: none;
+}
+
+.fake-text:empty ~ div .input-cursor {
+    display: inline;
+}
+
+.input-cursor {
+    display: none;
+}
+
+.input-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.prompt-input {
+    min-width: 0;
+    width: 0;
+    border:none; background: transparent; outline: 0;
+    color: transparent;
+}
